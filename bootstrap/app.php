@@ -15,6 +15,10 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->encryptCookies(except: ['appearance']);
+        
+        $middleware->trustProxies(at: '*');
+
+        $middleware->trustHosts(at: fn () => config('codesandbox.trusted_hosts'));
 
         $middleware->web(append: [
             HandleAppearance::class,
