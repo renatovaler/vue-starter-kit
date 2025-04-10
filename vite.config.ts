@@ -6,28 +6,30 @@ import path from 'path';
 import tailwindcss from 'tailwindcss';
 import { defineConfig } from 'vite';
 
-const PORT = 5173;
-const HOST = '0.0.0.0';
-
-const CLIENT_PORT = 5173;
-const CLIENT_HOST = 'localhost';
+const HOST = 'zcc7kx-5173.csb.app';
 
 export default defineConfig({
     server: {
         allowedHosts: true,
-        host: HOST,
-        port: PORT,
-        strictPort: true, // if you want Vite to fail if the port is already in use
+        host: '0.0.0.0',
+        watch: {
+            usePolling: true,
+        },
+        port: 5173,
+        strictPort: true,
         cors: {
             origin: [
                 // Supports: SCHEME://DOMAIN.laravel[:PORT]
                 /^https?:\/\/.*\.csb.app(:\d+)?$/,
             ],
+            methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+            allowedHeaders: ['Content-Type', 'Authorization'],
+            credentials: true,
         },
         hmr: {
-            host: CLIENT_HOST,
             protocol: 'wss',
-            clientPort: CLIENT_PORT,
+            host: HOST,
+            clientPort: 443,
         },
     },
     plugins: [

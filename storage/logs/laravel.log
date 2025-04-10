@@ -1,0 +1,149 @@
+[2025-03-24 13:15:01] local.ERROR: Command "session:clear" is not defined.
+
+Did you mean one of these?
+    auth:clear-resets
+    cache:clear
+    config:clear
+    event:clear
+    optimize:clear
+    queue:clear
+    route:clear
+    schedule:clear-cache
+    session:table
+    view:clear {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"session:clear\" is not defined.
+
+Did you mean one of these?
+    auth:clear-resets
+    cache:clear
+    config:clear
+    event:clear
+    optimize:clear
+    queue:clear
+    route:clear
+    schedule:clear-cache
+    session:table
+    view:clear at /project/workspace/vendor/symfony/console/Application.php:726)
+[stacktrace]
+#0 /project/workspace/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('session:clear')
+#1 /project/workspace/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /project/workspace/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /project/workspace/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /project/workspace/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#5 {main}
+"} 
+[2025-03-24 18:58:04] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email (Connection: sqlite, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (User, user@example.com, 2025-03-24 18:58:03, $2y$12$W2QFi6sjKsr0qMCKODkdUexruDi2pR2lSeZUQ/B5oQ2zJHkHn1x8q, gkceFdhCMv, 2025-03-24 18:58:04, 2025-03-24 18:58:04)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email (Connection: sqlite, SQL: insert into \"users\" (\"name\", \"email\", \"email_verified_at\", \"password\", \"remember_token\", \"updated_at\", \"created_at\") values (User, user@example.com, 2025-03-24 18:58:03, $2y$12$W2QFi6sjKsr0qMCKODkdUexruDi2pR2lSeZUQ/B5oQ2zJHkHn1x8q, gkceFdhCMv, 2025-03-24 18:58:04, 2025-03-24 18:58:04)) at /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Connection.php:818)
+[stacktrace]
+#0 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback()
+#1 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run()
+#2 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Connection.php(522): Illuminate\\Database\\Connection->statement()
+#3 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert()
+#4 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3767): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
+#5 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2141): Illuminate\\Database\\Query\\Builder->insertGetId()
+#6 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1360): Illuminate\\Database\\Eloquent\\Builder->__call()
+#7 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1325): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
+#8 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1164): Illuminate\\Database\\Eloquent\\Model->performInsert()
+#9 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(352): Illuminate\\Database\\Eloquent\\Model->save()
+#10 /project/workspace/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php(261): Illuminate\\Database\\Eloquent\\Factories\\Factory->Illuminate\\Database\\Eloquent\\Factories\\{closure}()
+#11 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(347): Illuminate\\Support\\Collection->each()
+#12 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(303): Illuminate\\Database\\Eloquent\\Factories\\Factory->store()
+#13 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(297): Illuminate\\Database\\Eloquent\\Factories\\Factory->create()
+#14 /project/workspace/database/seeders/DatabaseSeeder.php(20): Illuminate\\Database\\Eloquent\\Factories\\Factory->create()
+#15 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#16 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure()
+#18 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#19 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call()
+#20 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(188): Illuminate\\Container\\Container->call()
+#21 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(197): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#22 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
+#23 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#24 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded()
+#25 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#26 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#27 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure()
+#28 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#29 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call()
+#30 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call()
+#31 /project/workspace/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#32 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#33 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(68): Illuminate\\Console\\Command->run()
+#34 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(29): Illuminate\\Console\\Command->runCommand()
+#35 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(126): Illuminate\\Console\\Command->call()
+#36 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(658): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#37 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(110): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#38 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(89): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
+#39 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#40 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#41 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure()
+#42 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#43 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call()
+#44 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call()
+#45 /project/workspace/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#46 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#47 /project/workspace/vendor/symfony/console/Application.php(1094): Illuminate\\Console\\Command->run()
+#48 /project/workspace/vendor/symfony/console/Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand()
+#49 /project/workspace/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun()
+#50 /project/workspace/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run()
+#51 /project/workspace/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle()
+#52 /project/workspace/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
+#53 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email at /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Connection.php:569)
+[stacktrace]
+#0 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Connection.php(569): PDOStatement->execute()
+#1 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
+#2 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback()
+#3 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run()
+#4 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Connection.php(522): Illuminate\\Database\\Connection->statement()
+#5 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert()
+#6 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3767): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId()
+#7 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2141): Illuminate\\Database\\Query\\Builder->insertGetId()
+#8 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1360): Illuminate\\Database\\Eloquent\\Builder->__call()
+#9 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1325): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
+#10 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1164): Illuminate\\Database\\Eloquent\\Model->performInsert()
+#11 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(352): Illuminate\\Database\\Eloquent\\Model->save()
+#12 /project/workspace/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php(261): Illuminate\\Database\\Eloquent\\Factories\\Factory->Illuminate\\Database\\Eloquent\\Factories\\{closure}()
+#13 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(347): Illuminate\\Support\\Collection->each()
+#14 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(303): Illuminate\\Database\\Eloquent\\Factories\\Factory->store()
+#15 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(297): Illuminate\\Database\\Eloquent\\Factories\\Factory->create()
+#16 /project/workspace/database/seeders/DatabaseSeeder.php(20): Illuminate\\Database\\Eloquent\\Factories\\Factory->create()
+#17 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#18 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure()
+#20 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#21 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call()
+#22 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(188): Illuminate\\Container\\Container->call()
+#23 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(197): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#24 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
+#25 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#26 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded()
+#27 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#28 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#29 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure()
+#30 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#31 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call()
+#32 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call()
+#33 /project/workspace/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#34 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#35 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(68): Illuminate\\Console\\Command->run()
+#36 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(29): Illuminate\\Console\\Command->runCommand()
+#37 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(126): Illuminate\\Console\\Command->call()
+#38 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(658): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#39 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(110): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
+#40 /project/workspace/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(89): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
+#41 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#42 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#43 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure()
+#44 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#45 /project/workspace/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call()
+#46 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call()
+#47 /project/workspace/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#48 /project/workspace/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#49 /project/workspace/vendor/symfony/console/Application.php(1094): Illuminate\\Console\\Command->run()
+#50 /project/workspace/vendor/symfony/console/Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand()
+#51 /project/workspace/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun()
+#52 /project/workspace/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run()
+#53 /project/workspace/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle()
+#54 /project/workspace/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
+#55 {main}
+"} 
